@@ -20,15 +20,15 @@
 
 .header__logo {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 20px;
+  left: 40px;
   max-width: 10%;
 }
 
 .navbar--location--header {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 20px;
+  right: 40px;
   max-width: 50%;
   min-width: 50%;
 }
@@ -48,49 +48,63 @@
 }
 
 .search {
-  background: rgba(255, 255, 255, 0.5);
+  /* font-family: "Lato", sans-serif; */
+  color: #b5b5b5;
+  background: rgba(255, 255, 255, 0.3);
   width: 50%;
-  height: 20vh;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: center;
+  height: 17vh;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  /* padding: 5px; */
+  border-radius: 3px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "location location location"
+    "rooms budget start";
+  grid-gap: 5px;
 }
 
 .search__location {
+  font-family: "Lato", sans-serif;
+  grid-area: location;
   width: 100%;
   font-size: 15px;
   line-height: 20px;
   padding: 0;
   margin: 0;
   border: none;
-  /* padding: 1rem; */
-  /* margin-bottom: 5px; */
+  text-indent: 1rem;
 }
 
 .search__rooms {
-  width: 33%;
+  font-family: "Lato", sans-serif;
+  grid-area: rooms;
   font-size: 15px;
   line-height: 20px;
   padding: 0;
   margin: 0;
   border: none;
-  /* padding: 1rem; */
+  text-indent: 1rem;
 }
 
 .search__budget {
-  width: 33%;
+  font-family: "Lato", sans-serif;
+  grid-area: budget;
   font-size: 15px;
   line-height: 20px;
   padding: 0;
   margin: 0;
   border: none;
-  /* padding: 1rem; */
+  text-indent: 1rem;
+}
+
+.search__options {
+  color: #b5b5b5;
 }
 
 .search__start {
-  width: 33%;
+  grid-area: start;
   font-size: 15px;
   line-height: 20px;
 }
