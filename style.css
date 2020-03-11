@@ -1,0 +1,128 @@
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header {
+  background-image: url("images/header-background.png");
+  width: 100%;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  max-width: 10%;
+}
+
+.navbar--location--header {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.header__headline {
+  font-size: 62px;
+  font-weight: 300;
+  line-height: 74px;
+  margin: 0;
+}
+
+.header__tagline {
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 36px;
+  margin: 0;
+}
+
+.search {
+  background: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  height: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+}
+
+.search__location {
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* padding: 1rem; */
+  /* margin-bottom: 5px; */
+}
+
+.search__rooms {
+  width: 33%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* padding: 1rem; */
+}
+
+.search__budget {
+  width: 33%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* padding: 1rem; */
+}
+
+.search__start {
+  width: 33%;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  font-family: inherit;
+}
+
+.navbar__item {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.navbar__item:hover {
+  text-decoration: underline;
+}
+
+.navbar--location--header {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.social-media {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}

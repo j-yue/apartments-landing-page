@@ -1,0 +1,24 @@
+.button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  border-radius: 3px;
+  /* font-size: 15px;
+  line-height: 20px; */
+}
+
+.button--type--search {
+  background: #f5a623;
+}
+
+.button--type--navigation {
+  border: 1px solid #fff;
+  font-size: 15px;
+  line-height: 20px;
+  width: 15%;
+  height: 7%;
+  min-width: 15%;
+}
