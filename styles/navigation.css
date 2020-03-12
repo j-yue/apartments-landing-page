@@ -63,4 +63,9 @@
   margin: 0;
   padding: 0;
 }
+
+.social-media__item {
+  display: inline;
+  list-style-type: none !important;
+}
 /*# sourceMappingURL=navigation.css.map */
