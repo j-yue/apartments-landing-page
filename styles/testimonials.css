@@ -10,7 +10,6 @@
 
 .testimonials__quote-section {
   width: 75%;
-  text-align: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,11 +25,12 @@
           align-items: center;
 }
 
-.testimonials__quote {
-  margin-top: 2rem;
+.testimonials__quote-img {
+  margin-right: 10px;
 }
 
 .testimonials__quote {
+  padding-top: 2rem;
   color: #0F4555;
   font-size: 28px;
   font-weight: 300;

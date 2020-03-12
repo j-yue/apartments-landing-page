@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
 
@@ -174,15 +176,15 @@
 
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" data-aos="fade-up">
 
         <h2 class="testimonials__heading subheading">Testimonials</h2>
 
-        <blockquote class="testimonials__quote-section ">
+        <div class="testimonials__quote-section ">
             <img src="images/img-quote.png" class="testimonials__quote-img" alt="Quotation marks">
             <p class="testimonials__quote">The service browse through a list of apartments based
                 on my preferences.</p>
-        </blockquote>
+        </div>
 
         <section class="testimonials__people" data-aos="zoom-in-left">
 
@@ -210,7 +212,7 @@
 
 
 
-    <section class="signup" data-aos="fade-down">
+    <section class="signup" data-aos="fade-up">
 
         <h2 class="signup__heading subheading">Start now</h2>
 
@@ -235,28 +237,12 @@
             <a href="#" class="navbar__item link">Imprint</a>
         </nav>
 
-        <ul class="social-media">
-            <li class="social-media__item">
-                <a href="#" class="social-media__item link">
-                    <img src="images/facebook.png" alt="facebook icon">
-                </a>
-            </li>
-            <li class="social-media__item">
-                <a href="#" class="social-media__item link">
-                    <img src="images/twitter.png" alt="twiitter icon">
-                </a>
-            </li>
-            <li class="social-media__item">
-                <a href="#" class="social-media__item link">
-                    <img src="images/google.png" alt="google+ icon">
-                </a>
-            </li>
-            <li class="social-media__item">
-                <a href="#" class="social-media__item link">
-                    <img src="images/linkedin.png" alt="linkedin icon">
-                </a>
-            </li>
-        </ul>
+        <div class="social-media">
+            <a href="#" class="social-media__item link"><i class="social-media__icon fab fa-facebook-f"></i></a>
+            <a href="#" class="social-media__item link"><i class="social-media__icon fab fa-twitter"></i></a>
+            <a href="#" class="social-media__item link"><i class="social-media__icon fab fa-google-plus-g"></i></a>
+            <a href="#" class="social-media__item link"><i class="social-media__icon fab fa-linkedin-in"></i></a>
+        </div>
 
     </footer>
 

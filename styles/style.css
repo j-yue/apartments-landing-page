@@ -201,7 +201,7 @@
 }
 
 .social-media {
-  width: 25%;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,9 +215,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: 0;
-  margin: 0;
-  padding: 0;
 }
 
 .button {
@@ -412,7 +409,6 @@
 
 .testimonials__quote-section {
   width: 75%;
-  text-align: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,11 +424,12 @@
           align-items: center;
 }
 
-.testimonials__quote {
-  margin-top: 2rem;
+.testimonials__quote-img {
+  margin-right: 10px;
 }
 
 .testimonials__quote {
+  padding-top: 2rem;
   color: #0F4555;
   font-size: 28px;
   font-weight: 300;
@@ -632,12 +629,13 @@ html {
 .signup {
   background-image: url("../images/signup.png");
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background-position: center;
   background-size: cover;
 }
 
 .signup__description {
+  margin-bottom: 2rem;
   font-size: 16px;
   font-weight: regular;
   line-height: 20px;
@@ -669,5 +667,27 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.social-media__item {
+  width: 100%;
+  height: 100%;
+}
+
+.fab {
+  background: #9B9DA0;
+  color: #ffffff;
+  padding: .75rem;
+  max-width: .75rem;
+  max-height: .75rem;
+  min-width: .75rem;
+  min-height: .75rem;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.fab:hover {
+  background: #F5A623;
 }
 /*# sourceMappingURL=style.css.map */

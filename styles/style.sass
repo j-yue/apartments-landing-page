@@ -97,15 +97,15 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .signup 
     background-image: url('../images/signup.png')
     width: 100%
-    height: 80vh
+    height: 85vh
     @include fullFitBgImg
 
 .signup__description
+    margin-bottom: 2rem
     @include typography(16px, regular, 20px)
 
 .signup__button
     width: 70%
-
 
 
 
@@ -119,4 +119,20 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     @include flex(row, nowrap, space-between, center)
 
 
+.social-media__item
+    width: 100%
+    height: 100%
 
+
+.fab
+    background: $flat-color
+    color: $footer-bg
+    padding: .75rem
+    max-width: .75rem
+    max-height: .75rem
+    min-width: .75rem
+    min-height: .75rem
+    border-radius: 50%
+    transition: $button-transition
+    &:hover
+        background: $emphasis-color
