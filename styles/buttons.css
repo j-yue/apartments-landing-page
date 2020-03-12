@@ -1,0 +1,41 @@
+.button {
+  border: none;
+  font-family: "Lato", sans-serif;
+  border-radius: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem 1.5rem;
+  font-size: 15px;
+  font-weight: regular;
+  line-height: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button--type--navigation {
+  color: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: regular;
+  line-height: 20px;
+}
+
+.button--type--navigation:hover {
+  background: #ffffff;
+  color: #0F4555;
+}
+
+.button--type--action {
+  background: #ffffff;
+  color: #F5A623 !important;
+}
+
+.button--type--action:hover {
+  background: #F5A623;
+  color: #ffffff !important;
+}
+/*# sourceMappingURL=buttons.css.map */

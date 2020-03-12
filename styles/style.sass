@@ -1,4 +1,4 @@
-@import 'variables', 'mixins'
+@import 'variables', 'mixins', 'layout', 'navigation', 'buttons'
 
 html 
     scroll-behavior: smooth
@@ -9,16 +9,7 @@ html
     width: 100%
     @include flex(row, wrap, center, center)
     @include resetLayout
-
     
-$sections: header, listings,  features, testimonials, signup, footer
-
-@each $section in $sections
-    .#{$section}
-        padding: $section-padding
-        width: 100%
-        box-sizing: border-box
-        @include flex(column, nowrap, space-between, center)
 
 .header 
     height: 100vh
@@ -183,7 +174,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     width: 25%
 
 .testimonials
-    // background: $testimonials-bg
     color: $secondary-color
     width: 100%
     height: 80vh
@@ -201,8 +191,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
 .testimonials__quote
     margin-top: 2rem
-    // float: right
-    // width: 80%
 
 .testimonials__quote
     color: $quote-color
@@ -229,7 +217,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     width: 100%
     height: 80vh
     @include fullFitBgImg
-    // @include flex(row, wrap, center, center)
 
 
 .signup__description
@@ -248,80 +235,4 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     @include flex(row, nowrap, space-between, center)
 
 
-.glue--content--headlines 
-    text-align: center
-    padding-top: 10%
 
-.glue--content--features
-    @include flex(row, nowrap, space-around, center)
-
-.glue--content--signup
-    margin: auto
-    text-align: center
-
-
-.button 
-    border: none
-    font-family: $primary-font
-    border-radius: $border-radius
-    transition: $button-transition
-    padding: 1rem 1.5rem
-    @include typography(15px, regular, 20px)
-    &:hover
-        cursor: pointer
-
-
-.button--type--navigation
-    // color: #
-    color: inherit
-    border: 2px solid rgba(255, 255, 255, .3)
-    background: none
-    padding: 10px 20px
-    @include typography(15px, regular, 20px)
-    &:hover
-        background: $primary-color
-        color: $secondary-color
-
-
-.button--type--action
-    background: $primary-color
-    color: $tertiary-color !important
-    &:hover
-        background: $tertiary-color
-        color: $primary-color !important
-
-.link
-    text-decoration: none
-    color: inherit
-
-.navbar 
-    @include flex(row, nowrap, space-around, center)
-
-
-.navbar--location--header
-    width: 50%
-    text-transform: uppercase
-
-.navbar--location--footer
-    width: 50%
-    @include flex(row, nowrap, space-evenly, center)
-
-.navbar__item 
-    &:hover
-        text-decoration: underline
-
-.social-media
-    width: 25%
-    @include flex(row, nowrap, space-between, center)
-    @include resetList
-
-
-
-.subheading
-    font-family: $primary-font
-    // color: inherit
-    margin: 0
-    text-transform: uppercase
-    text-align: center
-    width: 100%
-    @include typography(14px, bold, 19px)

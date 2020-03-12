@@ -1,0 +1,36 @@
+@import 'variables', 'mixins'
+
+//layout for each main section    
+$sections: header, listings,  features, testimonials, signup, footer
+
+@each $section in $sections
+    .#{$section}
+        padding: $section-padding
+        width: 100%
+        box-sizing: border-box
+        @include flex(column, nowrap, space-between, center)
+
+
+
+// headings
+.subheading
+    font-family: $primary-font
+    margin: 0
+    text-transform: uppercase
+    text-align: center
+    width: 100%
+    @include typography(14px, bold, 19px)
+
+
+
+// glue is a wrapper for sibling elements in a block
+.glue--content--headlines 
+    text-align: center
+    padding-top: 10%
+
+.glue--content--features
+    @include flex(row, nowrap, space-around, center)
+
+.glue--content--signup
+    margin: auto
+    text-align: center
