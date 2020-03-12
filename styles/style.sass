@@ -1,0 +1,327 @@
+@import 'variables', 'mixins'
+
+html 
+    scroll-behavior: smooth
+
+.body
+    color: $primary-color
+    font-family: 'Lato', sans-serif
+    width: 100%
+    @include flex(row, wrap, center, center)
+    @include resetLayout
+
+    
+$sections: header, listings,  features, testimonials, signup, footer
+
+@each $section in $sections
+    .#{$section}
+        padding: $section-padding
+        width: 100%
+        box-sizing: border-box
+        @include flex(column, nowrap, space-between, center)
+
+.header 
+    height: 100vh
+    background-image: url('../images/header-background.png')
+    box-sizing: border-box
+    justify-content: space-around
+    @include fullFitBgImg
+
+.header__logo 
+    position: absolute
+    top: $header-padding
+    left: $header-padding
+
+.header__nav  
+    position: absolute
+    top: $header-padding
+    right: $header-padding
+    
+
+.header__headline
+    margin: 0
+    @include typography(62px, 300, 74px)
+
+
+.header__tagline
+    margin: 0
+    @include typography(30px, 100, 36px)
+
+
+.search
+    color: $search-color
+    background: rgba(255, 255, 255, .3)
+    width: 60%
+    height: 20vh
+    padding: 5px
+    display: grid
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-areas: "location location location" "rooms budget start"
+    grid-gap: 5px
+
+
+//map each element to its grid area
+$search-elements: ("location": location, "rooms": rooms, "budget": budget, "start": start)
+
+@each $el, $loc in $search-elements
+    .search__#{$el}
+        grid-area: $loc
+        @include searchInputs
+
+.search__start
+    background: $tertiary-color
+    font-family: $primary-font
+    color: $primary-color
+    text-align: center
+    &::after
+        content: ' \2192'
+        position: relative
+        right: -15%
+        opacity: 0
+        transition: $after-transition
+    &:hover
+        &::after
+            opacity: 1
+            right: 0
+        
+
+
+.listings
+    background: $listings-bg
+    height: 100vh
+
+
+
+.listings__apartments 
+    width: 100%
+    height: 70%
+    @include flex(row, nowrap, space-between, center)
+
+.listings__browse 
+    color: #0F4555 !important
+    border-color: #E9EAEA !important
+
+.apartment 
+    background: $apartments-bg
+    max-width: 32%
+    height: 100%
+    border-radius: $border-radius
+
+
+.apartment__img 
+    width: 100%
+    height: 60%
+    object-fit: cover
+    padding-bottom: $apartments-padding
+
+.apartment__neighborhood,
+    font-family: $primary-font
+    color: $neighborhood-color
+    text-transform: uppercase
+    text-indent: $apartments-padding
+    margin: 0 0 5px 0
+    @include typography(12px, regular, 16px)   
+
+.apartment__address
+    margin: 0
+    font-family: $secondary-font
+    color: $address-color
+    text-indent: $apartments-padding
+    margin-bottom: $apartments-padding
+    @include typography(20px, 300, 22px)
+
+
+.details
+    @include flex(row, nowrap, space-around, center)
+
+.details__grid
+    width: 100%
+    text-align: center
+    @include flex(row, wrap, center, center)
+
+.details__type
+    text-transform: uppercase
+    width: 100%
+    margin: 0
+    color: $details-type
+
+.details__value
+    width: 100%
+    color: $details-value
+
+
+.view 
+    align-self: start
+    width: 30%
+    @include resetList
+    
+.view__item
+    display: inline
+    font-family: $primary-font
+    color: $view-color
+    @include typography(15px, regular, 20px)
+    &:hover
+        cursor: pointer
+        text-decoration: underline
+
+.view--state--active
+    color: $active-view-color
+    margin-right: 1rem
+
+
+
+
+.features
+    background: $features-bg
+    width: 100%
+    height: 70vh
+    text-align: center
+
+
+.features__item
+    width: 25%
+
+.testimonials
+    // background: $testimonials-bg
+    color: $secondary-color
+    width: 100%
+    height: 80vh
+    
+.testimonials__heading
+    color: #4D4F56 
+
+.testimonials__quote-section
+    width: 75%
+    text-align: center
+    margin: auto
+    @include flex(row, nowrap, space-around, center)
+
+
+
+.testimonials__quote
+    margin-top: 2rem
+    // float: right
+    // width: 80%
+
+.testimonials__quote
+    color: $quote-color
+    @include typography(28px, 300, 40px)
+
+.testimonials__people
+    width: 100%
+    @include flex(row, nowrap, space-around, basline)
+
+.testimonials__person
+    text-align: center
+
+.testimonials__name
+    color: #0F4555
+    text-transform: uppercase
+    @include typography(12px, 500, 15px)
+
+.testimonials__occupation
+    color: #F5A623
+    @include typography(18px, 300, 15px)
+
+.signup 
+    background-image: url('../images/signup.png')
+    width: 100%
+    height: 80vh
+    @include fullFitBgImg
+    // @include flex(row, wrap, center, center)
+
+
+.signup__description
+    @include typography(16px, regular, 20px)
+
+.signup__button
+    width: 70%
+
+.footer 
+    background: $footer-bg
+    width: 100%
+    height: 15vh
+    padding: 0 1rem
+    color: $footer-color
+    @include typography(14px, regular, 19px)
+    @include flex(row, nowrap, space-between, center)
+
+
+.glue--content--headlines 
+    text-align: center
+    padding-top: 10%
+
+.glue--content--features
+    @include flex(row, nowrap, space-around, center)
+
+.glue--content--signup
+    margin: auto
+    text-align: center
+
+
+.button 
+    border: none
+    font-family: $primary-font
+    border-radius: $border-radius
+    transition: $button-transition
+    padding: 1rem 1.5rem
+    @include typography(15px, regular, 20px)
+    &:hover
+        cursor: pointer
+
+
+.button--type--navigation
+    // color: #
+    color: inherit
+    border: 2px solid rgba(255, 255, 255, .3)
+    background: none
+    padding: 10px 20px
+    @include typography(15px, regular, 20px)
+    &:hover
+        background: $primary-color
+        color: $secondary-color
+
+
+.button--type--action
+    background: $primary-color
+    color: $tertiary-color !important
+    &:hover
+        background: $tertiary-color
+        color: $primary-color !important
+
+.link
+    text-decoration: none
+    color: inherit
+
+.navbar 
+    @include flex(row, nowrap, space-around, center)
+
+
+.navbar--location--header
+    width: 50%
+    text-transform: uppercase
+
+.navbar--location--footer
+    width: 50%
+    @include flex(row, nowrap, space-evenly, center)
+
+.navbar__item 
+    &:hover
+        text-decoration: underline
+
+.social-media
+    width: 25%
+    @include flex(row, nowrap, space-between, center)
+    @include resetList
+
+
+
+.subheading
+    font-family: $primary-font
+    // color: inherit
+    margin: 0
+    text-transform: uppercase
+    text-align: center
+    width: 100%
+    @include typography(14px, bold, 19px)

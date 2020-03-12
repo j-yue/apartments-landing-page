@@ -6,178 +6,199 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="button.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-    <main class="main">
-        <header class="header">
-            <img src="images/logo.svg" alt="logo" class="header__logo">
-            <nav class="header__nav navbar navbar--location--header">
-                <a href="#" class="navbar__item">Browse</a>
-                <a href="#" class="navbar__item">Discover</a>
-                <a href="#" class="navbar__item">List your flat</a>
-                <a href="#" class="navbar__item">Login</a>
-                <a href="#" class="navbar__item button button--type--action">Join Us</a>
-            </nav>
-            <!-- <section class="header__content"> -->
+<body class="body">
+    <!-- <main class="main"> -->
+    <header class="header">
+        <img src="images/logo.svg" alt="logo" class="header__logo">
+        <nav class="header__nav navbar navbar--location--header">
+            <a href="#" class="navbar__item link">Browse</a>
+            <a href="#" class="navbar__item link">Discover</a>
+            <a href="#" class="navbar__item link">List your flat</a>
+            <a href="#" class="navbar__item link">Login</a>
+            <a href="#" class="navbar__item link button button--type--action">Join Us</a>
+        </nav>
+        <!-- <section class="header__content"> -->
+        <!-- <div class="glue glue--content--header"> -->
+        <div class="glue glue--content--headlines">
             <h1 class="header__headline">Renting made simple.</h1>
             <p class="header__tagline">We make it easy to rent apartments.</p>
-            <section class="header__search search">
-                <input class="search__location" type="text" placeholder="Maybe Berlin or somewhere nearby?">
-                <select class="search__rooms">
-                    <option class="search__options" default>Rooms</option>
-                    <option class="search__options">1</option>
-                    <option class="search__options">2</option>
-                    <option class="search__options">3+</option>
-                </select>
-                <select class="search__budget">
-                    <option class="search__options" default>Budget</option>
-                    <option class="search__options">$1000</option>
-                    <option class="search__options">$2000</option>
-                    <option class="search__options">$3000+</option>
-                </select>
-                <button class="search__start button button--type--search">Get started</button>
-                <!-- </section> -->
-            </section>
-            <button class="button button--type--navigation">How it works</button>
-        </header>
-        <section class="listings">
-            <nav>
-                <ul>
-                    <li>Latest</li>
-                    <li>Highest Reach</li>
-                </ul>
-            </nav>
-            <section class="listings__apartment">
-                <article>
-                    <img src="images/example-1.png" alt="Latest apartment available.">
-                    <p>Lincoln Heights</p>
-                    <p>324 Jonston Street</p>
-                    <div class="details"></div>
-                    <div>
-                        <p>Sq Ft</p>
-                        <p>110</p>
-                    </div>
-                    <div>
-                        <p>Rooms</p>
-                        <p>3</p>
-                    </div>
-                    <div>
-                        <p>Price</p>
-                        <p>$1400</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="images/example-2.png" alt="Latest apartment available.">
-                    <p>Chinatown</p>
-                    <p>987 Hill Street</p>
-                    <div class="details"></div>
-                    <div>
-                        <p>Sq Ft</p>
-                        <p>110</p>
-                    </div>
-                    <div>
-                        <p>Rooms</p>
-                        <p>3</p>
-                    </div>
-                    <div>
-                        <p>Price</p>
-                        <p>$1400</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="images/example-3.png" alt="Latest apartment available.">
-                    <p>Olvera Street</p>
-                    <p>1173 Alvarado Street</p>
-                    <div class="details"></div>
-                    <div>
-                        <p>Sq Ft</p>
-                        <p>110</p>
-                    </div>
-                    <div>
-                        <p>Rooms</p>
-                        <p>3</p>
-                    </div>
-                    <div>
-                        <p>Price</p>
-                        <p>$1400</p>
-                    </div>
-                </article>
-            </section>
-            <button>Browse more</button>
+        </div>
+        <section class="header__search search">
+            <input class="search__location" type="text" placeholder="Maybe Berlin or somewhere nearby?">
+            <select class="search__rooms">
+                <option class="search__options" default>Rooms</option>
+                <option class="search__options">1</option>
+                <option class="search__options">2</option>
+                <option class="search__options">3+</option>
+            </select>
+            <select class="search__budget">
+                <option class="search__options" default>Budget</option>
+                <option class="search__options">$1000</option>
+                <option class="search__options">$2000</option>
+                <option class="search__options">$3000+</option>
+            </select>
+            <button class="search__start button button--type--search">Get started</button>
+            <!-- </section> -->
         </section>
-        <section class="features">
-            <h2>Why use our service</h2>
-            <article>
-                <img src="images/icon-paperwork.png" alt="Crossed out book">
-                <h3>No paperwork</h3>
-                <p>All documents and forms have
+        <!-- </div> -->
+        <a href="#listings" class="link">
+            <button class="button button--type--navigation">
+                How it Works
+            </button>
+        </a>
+        <!-- <button class="button button--type--navigation">
+            <a class="link" href="#listings">How It Works</a>
+        </button> -->
+    </header>
+    <section class="listings" id="listings">
+        <ul class="listings__view view">
+            <li class="view__item view--state--active">Latest</li>
+            <li class="view__item">Highest Reach</li>
+        </ul>
+        <section class="listings__apartments">
+            <article class="apartment">
+                <img class="apartment__img" src="images/example-1.png" alt="Latest apartment available.">
+                <p class="apartment__neighborhood">Lincoln Heights</p>
+                <p class="apartment__address">324 Jonston Street</p>
+                <div class="details">
+                    <div class="details__grid">
+                        <p class="details__type">Sq Ft</p>
+                        <p class="details__value">110</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Rooms</p>
+                        <p class="details__value">3</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Price</p>
+                        <p class="details__value">$1400</p>
+                    </div>
+                </div>
+            </article>
+            <article class="apartment">
+                <img class="apartment__img" src="images/example-2.png" alt="Latest apartment available.">
+                <p class="apartment__neighborhood">Chinatown</p>
+                <p class="apartment__address">987 Hill Street</p>
+                <div class="details">
+                    <div class="details__grid">
+                        <p class="details__type">Sq Ft</p>
+                        <p class="details__value">110</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Rooms</p>
+                        <p class="details__value">3</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Price</p>
+                        <p class="details__value">$1400</p>
+                    </div>
+                </div>
+            </article>
+            <article class="apartment">
+                <img class="apartment__img" src="images/example-3.png" alt="Latest apartment available.">
+                <p class="apartment__neighborhood">Olvera Street</p>
+                <p class="apartment__address">1173 Alvarado Street</p>
+                <div class="details">
+                    <div class="details__grid">
+                        <p class="details__type">Sq Ft</p>
+                        <p class="details__value">110</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Rooms</p>
+                        <p class="details__value">3</p>
+                    </div>
+                    <div class="details__grid">
+                        <p class="details__type">Price</p>
+                        <p class="details__value">$1400</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <button class="listings__browse button button--type--navigation">Browse more</button>
+    </section>
+
+    <section class="features">
+        <h2 class="features__heading subheading">Why use our service</h2>
+        <div class="glue glue--content--features">
+            <article class="features__item">
+                <img class="features__icon" src="images/icon-paperwork.png" alt="Crossed out book">
+                <h3 class="features__subheading">No paperwork</h3>
+                <p class="features__description">All documents and forms have
                     to be uploaded online once.</p>
             </article>
-            <article>
-                <img src="images/icon-free.png" alt="Price tag">
-                <h3>Free!</h3>
-                <p>It’s free of charge for tenants.
+            <article class="features__item">
+                <img class="features__icon" src="images/icon-free.png" alt="Price tag">
+                <h3 class="features__subheading">Free!</h3>
+                <p class="features__description">It’s free of charge for tenants.
                     Premium users are charged for credit checks.</p>
             </article>
-            <article>
-                <img src="images/icon-verified.png" alt="Outline of a man's figure">
-                <h3>
-                    <p>Our apartments and landlords are verified.
-                        We’re proud of being scam-free!</p>
-                </h3>
+            <article class="features__item">
+                <img class="features__icon" src="images/icon-verified.png" alt="Outline of a man's figure">
+                <h3 class="features__subheading">Verified, real apartments</h3>
+                <p class="features__description">Our apartments and landlords are verified.
+                    We’re proud of being scam-free!</p>
+            </article>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2 class="testimonials__heading subheading">Testimonials</h2>
+        <blockquote class="testimonials__quote-section ">
+            <img src="images/img-quote.png" class="testimonials__quote-img" alt="Quotation marks">
+            <p class="testimonials__quote">The service browse through a list of apartments based
+                on my preferences.</p>
+        </blockquote>
+        <section class="testimonials__people">
+            <article class="testimonials__person">
+                <img class="testimonials__img" src="images/testimonial-1.png" alt="Person giving the testimonial.">
+            </article>
+            <article class="testimonials__person">
+                <img class="testimonials__img" src="images/testimonial-2.png" alt="Person giving the testimonial.">
+                <p class="testimonials__name">Brianna Terry</p>
+                <p class="testimonials__occupation">Student</p>
+            </article>
+            <article class="testimonials__person">
+                <img class="testimonials__img" src="images/testimonial-3.png" alt="Person giving the testimonial.">
+
+            </article>
+            <article class="testimonials__person">
+                <img class="testimonials__img" src="images/testimonial-4.png" alt="Person giving the testimonial.">
+
             </article>
         </section>
-        <section class=testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <img src="images/img-quote.svg" alt="">
-                <p>The service browse through a list of apartments based
-                    on my preferences.</p>
-            </blockquote>
-            <section class="people">
-                <article>
-                    <img src="images/testimonial-1.png" alt="Person giving the testimonial.">
-                </article>
-                <article>
-                    <img src="images/testimonial-2.png" alt="Person giving the testimonial.">
-                    <p>Brianna Terry</p>
-                    <p>Student</p>
-                </article>
-                <article>
-                    <img src="images/testimonial-3.png" alt="Person giving the testimonial.">
-
-                </article>
-                <article>
-                    <img src="images/testimonial-4.png" alt="Person giving the testimonial.">
-
-                </article>
-            </section>
-        </section>
-        <section class="signup">
-            <h2>Start now</h2>
-            <p>We’ll give you $20 off for your first rent!</p>
-        </section>
-        <footer>
-            <p>2015 All Rights Reserved</p>
-            <nav class="navbar navbar--location--footer">
-                <a href="#" class="navbar__item">Blog</a>
-                <a href="#" class="navbar__item">About</a>
-                <a href="#" class="navbar__item">Contact</a>
-                <a href="#" class="navbar__item">FAQs</a>
-                <a href="#" class="navbar__item">Imprint</a>
-            </nav>
-            <ul class="social-media">
-                <li class="social-media__link">Facebook</li>
-                <li class="social-media__link">Twitter</li>
-                <li class="social-media__link">Linkedin</li>
-            </ul>
-        </footer>
+    </section>
+    <section class="signup">
+        <h2 class="signup__heading subheading">Start now</h2>
+        <div class="glue glue--content--signup">
+            <p class="signup__description">We’ll give you $20 off for your first rent!</p>
+            <button class="signup__button button button--type--action">Sign Up</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer__copyright">2015 All Rights Reserved</p>
+        <nav class="navbar navbar--location--footer">
+            <a href="#" class="navbar__item link">Blog</a>
+            <a href="#" class="navbar__item link">About</a>
+            <a href="#" class="navbar__item link">Contact</a>
+            <a href="#" class="navbar__item link">FAQs</a>
+            <a href="#" class="navbar__item link">Imprint</a>
+        </nav>
+        <ul class="social-media">
+            <li class="social-media__icon">Facebook</li>
+            <li class="social-media__icon">Twitter</li>
+            <li class="social-media__icon">Linkedin</li>
+        </ul>
+    </footer>
     </main>
     <script src="" async defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
