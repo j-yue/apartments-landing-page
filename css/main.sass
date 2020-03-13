@@ -88,8 +88,6 @@ html
 .search
     color: $search-color
     background: rgba(255, 255, 255, .3)
-    // width: 100%
-    // max-width: 80&
     width: 90%
     margin: 1rem auto 2rem auto
     height: 20vh
@@ -139,7 +137,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
 .listings
     width: 100%
-    // height: 100vh
     padding: 2rem
     box-sizing: border-box
     background: $listings-bg
@@ -149,7 +146,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     color: $flat-color
     margin-bottom: 1rem
     padding: 0
-    // @include resetLayout
 
 .view__item
     display: inline
@@ -206,7 +202,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .features
     background: $emphasis-color
     padding: 1rem
-    // @include flex: 
 
 .glue--content--features
     @include flex(row, wrap, space-around, center)
@@ -218,7 +213,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .features__icon
     display: block
     margin: auto
-    // text-align: center
 
 
 .testimonials
@@ -294,6 +288,8 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .subheading
     text-align: center
     font-size: 1.5rem
+    text-transform: uppercase
+    margin: auto
 
 .wrapper
     @include flex(column, nowrap, center, center)
@@ -305,8 +301,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     font-family: $primary-font
     border-radius: $border-radius
     transition: $button-transition
-    // padding: 1rem 1.5rem
-    // @include typography(15px, regular, 20px)
     &:hover
         cursor: pointer
 
@@ -317,7 +311,6 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     background: none
     height: 2.5rem
     margin: auto
-    // text-align: center
     &:hover
         background: $primary-color
         color: $secondary-color
@@ -331,3 +324,82 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     &:hover
         background: $emphasis-color
         color: $primary-color !important
+
+
+
+
+@media (orientation: landscape)
+    .mobile-menu__hamburger
+        display: none !important
+    
+    .navbar--location--header
+        // border: 3px solid pink
+        z-index: 1
+        opacity: 1
+        width: 50%
+        padding: 0
+        height: auto
+
+        position: relative
+        // right: 0 !important
+        align-self: flex-end
+        background: none
+        top: 0
+        @include flex(row, nowrap, space-between, baseline)
+
+    .header__nav
+        // @include flex(row, nowrap, space-evenly, center)
+    
+    .listings
+        height: 100vh
+        @include flex(row, wrap, space-between, center)
+    .listings__apartments
+        height: 70%
+        width: 100%
+        @include flex(row, nowrap, space-between, center)
+    .apartment
+        margin: 0
+        height: 100%
+
+    .features
+        height: 70vh
+        @include flex(row, wrap, space-between, center)
+        // height: 80vh
+        // @include flex(row, space-between, center, center)
+    .glue--content--features
+        text-align: center
+        @include flex(row, nowrap, space-evenly, center)
+
+    .features__item
+        width: 30%
+
+    .testimonials
+        height: 80vh
+        @include flex(row, wrap, center, center)
+
+    .testimonials__quote-section
+        font-size: 1.5rem
+
+    .testimonials__person
+        display: inline-block
+        max-width: 20%
+        margin: 0
+    
+    .testimonials__people
+        width: 80%
+        @include flex(row, nowrap, space-between, flex-start)
+
+    .signup
+        height: 80vh
+
+    .footer
+        flex-wrap: nowrap
+        justify-content: space-between
+
+    .navbar--location--footer
+        width: 50%
+
+    .social-media
+        width: 20%
+    .button--type--action
+        height: inherit
