@@ -2,17 +2,44 @@
 
 html 
     scroll-behavior: smooth
+    font-size: 10px
 
 .body
     color: $primary-color
     font-family: 'Lato', sans-serif
     width: 100%
+    font-size: $body
+    min-width: 320px
+    min-height: 480px
     @include flex(row, wrap, center, center)
     @include resetLayout
+
+.mobile-menu
+    &:hover
+        cursor: pointer
     
+.mobile-menu__close
+    position: absolute
+    top: $header-padding
+    left: $header-padding
+    display: none !important
+    &:hover
+        color: $flat-color
+    &:active
+        transform: translateY(3px)
+
+.mobile-menu__hamburger
+    position: absolute
+    top: $header-padding
+    right: $header-padding
+    &:hover
+        color: $flat-color
+    &:active
+        transform: translateY(3px)
 
 .header 
     height: 100vh
+    // width: 100%
     background-image: url('../images/header-background.png')
     box-sizing: border-box
     justify-content: space-around
@@ -23,6 +50,13 @@ html
     top: $header-padding
     left: $header-padding
 
+.header__close
+    position: absolute
+    top: $header-padding
+    left: $header-padding
+    // display: none !important
+
+
 .header__nav  
     position: absolute
     top: $header-padding
@@ -31,18 +65,19 @@ html
 
 .header__headline
     margin: 0
-    @include typography(62px, 300, 74px)
+    @include typography($large, 300, $large)
 
 
 .header__tagline
     margin: 0
-    @include typography(30px, 100, 36px)
+    @include typography($med, 100, $med)
 
 
 .search
     color: $search-color
     background: rgba(255, 255, 255, .3)
-    width: 60%
+    // width: 100%
+    max-width: 80&
     height: 20vh
     padding: 5px
     display: grid
@@ -65,30 +100,53 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     font-family: $primary-font
     color: $primary-color
     text-align: center
-    &::after
-        content: ' \2192'
-        position: relative
-        right: -15%
-        opacity: 0
-        transition: $after-transition
+    padding: .5rem
+    font-size: 1rem
+    // word-break: break-all
+    // font-size: 50%
+    // &::after
+    //     content: ' \2192'
+    //     position: relative
+    //     right: -15%
+    //     opacity: 0
+    //     transition: $after-transition
     &:hover
-        &::after
-            opacity: 1
-            right: 0
+        color: $emphasis-color
+        background: $secondary-color
+        // &::after
+        //     opacity: 1
+        //     right: 0
         
 
 
+.glue--content--features
+    width: 100%
+    height: 100%    
 
 .features
     background: $features-bg
     width: 100%
-    height: 70vh
+    height: 85vh
     text-align: center
+    // @include flex(row, wrap, center, center)
+    // @include flex()
+    // align-items: flex-end
+    @include flex(column, nowrap, center, center)
 
+.features__icon
+    // max-width: 30%
+
+// .features__subheading
+//     margin: 0
+//     font-size: 1rem
 
 .features__item
-    width: 25%
+    // max-height: 10%
+// .features__description
+//     font-size: 1rem
 
+// .glue--content--features
+//     @include flex(row, wrap, space-between)
 
 
 
@@ -110,6 +168,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
 
 .footer 
+    display: none !important
     background: $footer-bg
     width: 100%
     height: 15vh

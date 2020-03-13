@@ -21,6 +21,7 @@
 .navbar--location--header {
   width: 50%;
   text-transform: uppercase;
+  display: none !important;
 }
 
 .navbar--location--footer {
