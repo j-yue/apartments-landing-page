@@ -1,0 +1,45 @@
+
+.body
+    min-width: 320px
+    min-height: 480px
+    width: 100%
+    font-family: $primary-font
+    font-size: 1rem
+    color: $primary-color
+    box-sizing: border-box
+    --vh: 1vh
+    overflow-x: hidden !important
+    @include resetLayout
+    @include flex(column, nowrap, center, center)
+
+
+// set up layout for each main section
+@each $section, $class in $sections
+    .#{$class}
+        width: 100%
+        box-sizing: border-box
+        padding: 1rem
+        @include flex(column, nowrap, space-around, center)
+
+
+// glue block is used to glue elements together if they would be separated by flexbox
+.glue--content--headlines
+    text-align: center
+    margin-top: 15%
+
+
+.subheading
+    text-align: center
+    font-size: 1.5rem
+    text-transform: uppercase
+    margin: 1rem auto
+
+
+.wrapper
+    @include flex(column, nowrap, center, center)
+
+
+// have signup button closer to middle
+.wrapper--loc--signup
+    flex: 1
+

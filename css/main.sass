@@ -1,20 +1,33 @@
-@import '_variables', '_mixins'
+/**
+ LAYOUT
+ 
+ html
+ 
+ link
+ 
+ header
+ - mobile-menu
+ - search
+ 
+ listings
+ - apartment
+ - details
+ - view
+ 
+ features
+ 
+ testimonials
+ 
+ signup
+ 
+ footer
+ 
+ */
+    
+@import '_variables', '_mixins', '_layout', '_buttons', '_fontSizing'
 
 html
     font-size: 16px
-
-.body
-    min-width: 320px
-    min-height: 480px
-    width: 100%
-    font-family: $primary-font
-    font-size: 1rem
-    color: $primary-color
-    box-sizing: border-box
-    --vh: 1vh
-    overflow-x: hidden !important
-    @include resetLayout
-    @include flex(column, nowrap, center, center)
 
 
 .link
@@ -24,16 +37,11 @@ html
         text-decoration: underline
 
 
-
+// HEADER
 .header
-    width: 100%
     height: 100vh
-    padding: 1rem
-    box-sizing: border-box
     background: url('../images/header-background.png')
-    background-position: center
-    background-size: cover
-    @include flex(column, nowrap, space-around, center)
+    @include coverBg
 
 
 .mobile-menu__hamburger
@@ -68,7 +76,7 @@ html
     height: 100%
     padding: 25%
     box-sizing: border-box
-    background: $secondary-color
+    background: $emphasis-color
     z-index: -1
     opacity: 0
     @include flex(column, nowrap, space-around, center)
@@ -80,10 +88,6 @@ html
 .header__tagline
     margin: 0
     font-size: 1.5rem
-
-.glue--content--headlines
-    text-align: center
-    margin-top: 15%
 
 .search
     color: $search-color
@@ -99,9 +103,6 @@ html
     grid-gap: 5px
     border-radius: $border-radius
 
-.search__start
-    font-size: .75rem !important
-
 
 //map each element to its grid area
 $search-elements: ("location": location, "rooms": rooms, "budget": budget, "start": start)
@@ -111,6 +112,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
         grid-area: $loc
         border: none
         text-indent: .5rem
+        font-size: 1rem
 
 .search__start
     background: $emphasis-color
@@ -118,27 +120,16 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     color: $primary-color
     text-align: center
     padding: .5rem
-    font-size: 1rem
-    // word-break: break-all
-    // font-size: 50%
-    // &::after
-    //     content: ' \2192'
-    //     position: relative
-    //     right: -15%
-    //     opacity: 0
-    //     transition: $after-transition
+    text-indent: 0
     &:hover
         color: $emphasis-color
         background: $secondary-color
-        // &::after
-        //     opacity: 1
-        //     right: 0
-        
 
+
+
+// LISTINGS
 .listings
-    width: 100%
     padding: 2rem
-    box-sizing: border-box
     background: $listings-bg
     color: $flat-color
 
@@ -157,7 +148,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
     
 .listings__apartments
-    height: 300vh
+    height: 250vh
     @include flex(column, nowrap, space-around, center)
 
 
@@ -166,16 +157,19 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     background: #fff
     border-radius: $border-radius
     height: 80vh
+    max-height: 90vh
     @include flex(column, nowrap, space-between, center)
 
 .apartment__img
     max-width: 100%
+    min-height: 60%
     object-fit: cover
 
 
 .apartment__neighborhood
     text-transform: uppercase
     font-size: .75rem
+    margin-bottom: 0
 
 .apartment__address
     margin: 0
@@ -199,6 +193,9 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     border-color: $flat-color !important
 
 
+
+
+//FEATURES
 .features
     background: $emphasis-color
     padding: 1rem
@@ -215,13 +212,11 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     margin: auto
 
 
+
+
+// TESTIMONIALS
 .testimonials
     color: $secondary-color
-    width: 100%
-    height: 100vh
-    padding: 1rem
-    box-sizing: border-box
-    @include flex(column, nowrap, space-between, center)
 
 .testimonials__quote-section
     width: 90%
@@ -251,26 +246,22 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .testimonials__occupation
     color: $emphasis-color
 
-    
+
+
+
+//SIGNUP    
 .signup
-    width: 100%
-    height: 70vh
-    box-sizing: border-box
-    padding: 1rem
+    height: 50vh
     background: url('../images/signup.png')
-    @include flex(column, nowrap, space-between, center)
-
-.wrapper--loc--signup
-    flex: 1
+    @include coverBg
 
 
+
+//FOOTER
 .footer
     height: 20vh
     color: $flat-color
-    width: 100%
     padding: .5rem 1rem
-    box-sizing: border-box
-    @include flex(row, wrap, center, center)
 
 
 .footer__copyright
@@ -283,123 +274,3 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 .social-media
     width: 100%
     @include flex(row, wrap, space-evenly, center)
-
-
-.subheading
-    text-align: center
-    font-size: 1.5rem
-    text-transform: uppercase
-    margin: auto
-
-.wrapper
-    @include flex(column, nowrap, center, center)
-
-
-
-.button 
-    border: none
-    font-family: $primary-font
-    border-radius: $border-radius
-    transition: $button-transition
-    &:hover
-        cursor: pointer
-
-//buttons that navigate to another section or page
-.button--type--navigation
-    color: inherit
-    border: 2px solid rgba(255, 255, 255, .3)
-    background: none
-    height: 2.5rem
-    margin: auto
-    &:hover
-        background: $primary-color
-        color: $secondary-color
-
-// //get started, join us, sign up buttons
-.button--type--action
-    height: 2.5rem
-    padding: .5rem
-    background: $primary-color
-    color: $emphasis-color !important
-    &:hover
-        background: $emphasis-color
-        color: $primary-color !important
-
-
-
-
-@media (orientation: landscape)
-    .mobile-menu__hamburger
-        display: none !important
-    
-    .navbar--location--header
-        // border: 3px solid pink
-        z-index: 1
-        opacity: 1
-        width: 50%
-        padding: 0
-        height: auto
-
-        position: relative
-        // right: 0 !important
-        align-self: flex-end
-        background: none
-        top: 0
-        @include flex(row, nowrap, space-between, baseline)
-
-    .header__nav
-        // @include flex(row, nowrap, space-evenly, center)
-    
-    .listings
-        height: 100vh
-        @include flex(row, wrap, space-between, center)
-    .listings__apartments
-        height: 70%
-        width: 100%
-        @include flex(row, nowrap, space-between, center)
-    .apartment
-        margin: 0
-        height: 100%
-
-    .features
-        height: 70vh
-        @include flex(row, wrap, space-between, center)
-        // height: 80vh
-        // @include flex(row, space-between, center, center)
-    .glue--content--features
-        text-align: center
-        @include flex(row, nowrap, space-evenly, center)
-
-    .features__item
-        width: 30%
-
-    .testimonials
-        height: 80vh
-        @include flex(row, wrap, center, center)
-
-    .testimonials__quote-section
-        font-size: 1.5rem
-
-    .testimonials__person
-        display: inline-block
-        max-width: 20%
-        margin: 0
-    
-    .testimonials__people
-        width: 80%
-        @include flex(row, nowrap, space-between, flex-start)
-
-    .signup
-        height: 80vh
-
-    .footer
-        flex-wrap: nowrap
-        justify-content: space-between
-
-    .navbar--location--footer
-        width: 50%
-
-    .social-media
-        width: 20%
-    .button--type--action
-        height: inherit

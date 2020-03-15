@@ -1,0 +1,31 @@
+.button 
+    border: none
+    font-family: $primary-font
+    border-radius: $border-radius
+    transition: $button-transition
+    font-size: 1rem
+    padding: 0 .5rem
+    &:hover
+        cursor: pointer
+        text-decoration: none
+
+//buttons that navigate to another section or page
+.button--type--navigation
+    color: inherit
+    border: 2px solid rgba(255, 255, 255, .3)
+    background: none
+    height: 2.5rem
+    margin: 1rem auto 0 auto
+    &:hover
+        background: $primary-color
+        color: $secondary-color
+
+// //get started, join us, sign up buttons
+.button--type--action
+    height: 2.5rem
+    padding: .5rem
+    background: $primary-color
+    color: $emphasis-color !important
+    &:hover
+        background: $emphasis-color
+        color: $primary-color !important

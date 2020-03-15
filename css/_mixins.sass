@@ -2,41 +2,10 @@
     margin: 0
     padding: 0
 
-@mixin resetList
-    list-style: 0
-    @include resetLayout
 
-@mixin resetLink
-    text-decoration: none
-    
-
-@mixin resetButton
-    background: none
-    border: none
-
-@mixin fullFitBgImg
+@mixin coverBg
     background-position: center
     background-size: cover
-
-
-@mixin typography($size, $weight, $height)
-    font-size: $size
-    font-weight: $weight
-    line-height: $height
-
-@mixin subheading($color)
-    color: $color
-    font-family: $primary-font
-    text-transform: uppercase
-    @include typography(14px, bold, 19px)
-
-@mixin searchInputs
-    // text-indent: 0px
-    font-family: $primary-font
-    // max-height: 8vh
-    // font-size: 10px !important
-    // @include typography(15px, regular, 20px)
-    
 
 
 @mixin flex($dir, $wrap, $justify, $align)

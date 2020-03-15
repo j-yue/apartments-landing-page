@@ -1,7 +1,28 @@
-html {
-  font-size: 16px;
-}
+/**
+ LAYOUT
 
+ html
+
+ link
+
+ header
+ - mobile-menu
+ - search
+
+ listings
+ - apartment
+ - details
+ - view
+
+ features
+
+ testimonials
+
+ signup
+
+ footer
+
+ */
 .body {
   min-width: 320px;
   min-height: 480px;
@@ -30,24 +51,11 @@ html {
           align-items: center;
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
 .header {
   width: 100%;
-  height: 100vh;
-  padding: 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../images/header-background.png");
-  background-position: center;
-  background-size: cover;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +68,219 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.listings {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.glue--content--headlines {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 1rem auto;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper--loc--signup {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.button {
+  border: none;
+  font-family: "Lato", sans-serif;
+  border-radius: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1rem;
+  padding: 0 .5rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button--type--navigation {
+  color: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  height: 2.5rem;
+  margin: 1rem auto 0 auto;
+}
+
+.button--type--navigation:hover {
+  background: #ffffff;
+  color: #0F4555;
+}
+
+.button--type--action {
+  height: 2.5rem;
+  padding: .5rem;
+  background: #ffffff;
+  color: #F5A623 !important;
+}
+
+.button--type--action:hover {
+  background: #F5A623;
+  color: #ffffff !important;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.5vw;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.header {
+  height: 100vh;
+  background: url("../images/header-background.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .mobile-menu__hamburger {
@@ -100,7 +321,7 @@ html {
   padding: 25%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #0F4555;
+  background: #F5A623;
   z-index: -1;
   opacity: 0;
   display: -webkit-box;
@@ -127,11 +348,6 @@ html {
   font-size: 1.5rem;
 }
 
-.glue--content--headlines {
-  text-align: center;
-  margin-top: 15%;
-}
-
 .search {
   color: #B5B5B5;
   background: rgba(255, 255, 255, 0.3);
@@ -150,10 +366,6 @@ html {
   border-radius: 3px;
 }
 
-.search__start {
-  font-size: .75rem !important;
-}
-
 .search__location {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -161,6 +373,7 @@ html {
   grid-area: location;
   border: none;
   text-indent: .5rem;
+  font-size: 1rem;
 }
 
 .search__rooms {
@@ -169,6 +382,7 @@ html {
   grid-area: rooms;
   border: none;
   text-indent: .5rem;
+  font-size: 1rem;
 }
 
 .search__budget {
@@ -177,6 +391,7 @@ html {
   grid-area: budget;
   border: none;
   text-indent: .5rem;
+  font-size: 1rem;
 }
 
 .search__start {
@@ -185,6 +400,7 @@ html {
   grid-area: start;
   border: none;
   text-indent: .5rem;
+  font-size: 1rem;
 }
 
 .search__start {
@@ -193,7 +409,7 @@ html {
   color: #ffffff;
   text-align: center;
   padding: .5rem;
-  font-size: 1rem;
+  text-indent: 0;
 }
 
 .search__start:hover {
@@ -202,10 +418,7 @@ html {
 }
 
 .listings {
-  width: 100%;
   padding: 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background: #F6F8FA;
   color: #9B9DA0;
 }
@@ -227,7 +440,7 @@ html {
 }
 
 .listings__apartments {
-  height: 300vh;
+  height: 250vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,6 +460,7 @@ html {
   background: #fff;
   border-radius: 3px;
   height: 80vh;
+  max-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +478,7 @@ html {
 
 .apartment__img {
   max-width: 100%;
+  min-height: 60%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -271,6 +486,7 @@ html {
 .apartment__neighborhood {
   text-transform: uppercase;
   font-size: .75rem;
+  margin-bottom: 0;
 }
 
 .apartment__address {
@@ -340,24 +556,6 @@ html {
 
 .testimonials {
   color: #0F4555;
-  width: 100%;
-  height: 100vh;
-  padding: 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .testimonials__quote-section {
@@ -407,53 +605,16 @@ html {
 }
 
 .signup {
-  width: 100%;
-  height: 70vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 1rem;
+  height: 50vh;
   background: url("../images/signup.png");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrapper--loc--signup {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {
   height: 20vh;
   color: #9B9DA0;
-  width: 100%;
   padding: .5rem 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .footer__copyright {
@@ -492,227 +653,5 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.subheading {
-  text-align: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin: auto;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.button {
-  border: none;
-  font-family: "Lato", sans-serif;
-  border-radius: 3px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.button:hover {
-  cursor: pointer;
-}
-
-.button--type--navigation {
-  color: inherit;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background: none;
-  height: 2.5rem;
-  margin: auto;
-}
-
-.button--type--navigation:hover {
-  background: #ffffff;
-  color: #0F4555;
-}
-
-.button--type--action {
-  height: 2.5rem;
-  padding: .5rem;
-  background: #ffffff;
-  color: #F5A623 !important;
-}
-
-.button--type--action:hover {
-  background: #F5A623;
-  color: #ffffff !important;
-}
-
-@media (orientation: landscape) {
-  .mobile-menu__hamburger {
-    display: none !important;
-  }
-  .navbar--location--header {
-    z-index: 1;
-    opacity: 1;
-    width: 50%;
-    padding: 0;
-    height: auto;
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    background: none;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-  .listings {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .listings__apartments {
-    height: 70%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .apartment {
-    margin: 0;
-    height: 100%;
-  }
-  .features {
-    height: 70vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .glue--content--features {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .features__item {
-    width: 30%;
-  }
-  .testimonials {
-    height: 80vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .testimonials__quote-section {
-    font-size: 1.5rem;
-  }
-  .testimonials__person {
-    display: inline-block;
-    max-width: 20%;
-    margin: 0;
-  }
-  .testimonials__people {
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .signup {
-    height: 80vh;
-  }
-  .footer {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .navbar--location--footer {
-    width: 50%;
-  }
-  .social-media {
-    width: 20%;
-  }
-  .button--type--action {
-    height: inherit;
-  }
 }
 /*# sourceMappingURL=main.css.map */
