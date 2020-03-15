@@ -232,6 +232,19 @@
   padding: .5rem;
   background: #ffffff;
   color: #F5A623 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button--type--action:hover {
@@ -266,7 +279,7 @@
 html {
   font-size: 16px;
   --vh: 1vh;
-  --max-Height: 100vh;
+  --max-height: 100vh;
 }
 
 .link {
@@ -299,12 +312,13 @@ html {
 .mobile-menu__close {
   position: absolute;
   left: 1rem;
+  top: 1rem;
   z-index: -1;
+  opacity: 1;
 }
 
 .mobile-menu__close:hover {
   cursor: pointer;
-  color: #F5A623;
 }
 
 .header__logo {
