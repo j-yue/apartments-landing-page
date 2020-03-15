@@ -18,11 +18,15 @@ const hide = el => {
 const showNav = () => {
   show(nav, 1);
   show(close, 2);
+  body.style.height = "var(--max-height)";
+  body.style.overflow = "hidden";
 };
 
 const hideNav = () => {
   hide(close);
   hide(nav);
+  body.style.height = "100%";
+  body.style.overflow = "auto";
 };
 
 menu.addEventListener("click", () => showNav());

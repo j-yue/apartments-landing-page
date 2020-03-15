@@ -20,11 +20,15 @@ var hide = function hide(el) {
 var showNav = function showNav() {
   show(nav, 1);
   show(close, 2);
+  body.style.height = "var(--max-height)";
+  body.style.overflow = "hidden";
 };
 
 var hideNav = function hideNav() {
   hide(close);
   hide(nav);
+  body.style.height = "100%";
+  body.style.overflow = "auto";
 };
 
 menu.addEventListener("click", function () {
