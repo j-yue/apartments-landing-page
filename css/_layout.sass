@@ -8,7 +8,7 @@
     color: $primary-color
     box-sizing: border-box
     --vh: 1vh
-    overflow-x: hidden !important
+    // overflow-x: hidden !important
     @include resetLayout
     @include flex(column, nowrap, center, center)
 
@@ -17,6 +17,7 @@
 @each $section, $class in $sections
     .#{$class}
         width: 100%
+        max-width: 100%
         box-sizing: border-box
         padding: 1rem
         @include flex(column, nowrap, space-around, center)

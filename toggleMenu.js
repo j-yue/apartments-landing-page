@@ -1,8 +1,9 @@
 // toggle visibility of header nav and close button when visible (user is on mobile)
-
+const body = document.body;
 const menu = document.querySelector(".mobile-menu__hamburger");
 const nav = document.querySelector(".header__nav");
 const close = document.querySelector(".mobile-menu__close");
+const header = document.querySelector(".header");
 
 const show = (el, zIndex) => {
   el.style.opacity = "1";

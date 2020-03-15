@@ -33,7 +33,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   --vh: 1vh;
-  overflow-x: hidden !important;
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -53,6 +52,7 @@
 
 .header {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -72,6 +72,7 @@
 
 .listings {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -91,6 +92,7 @@
 
 .features {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -110,6 +112,7 @@
 
 .testimonials {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -129,6 +132,7 @@
 
 .signup {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -148,6 +152,7 @@
 
 .footer {
   width: 100%;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
