@@ -258,6 +258,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+        const root = document.documentElement
+        const maxHeight = window.innerHeight
+        root.style.setProperty('--vh', (maxHeight * .01) + 'px');
+        root.style.setProperty('--max-height', maxHeight);
     </script>
 </body>
 

@@ -28,6 +28,8 @@
 
 html
     font-size: 16px
+    --vh: 1vh
+    --max-Height: 100vh
 
 
 .link
@@ -39,7 +41,7 @@ html
 
 // HEADER
 .header
-    height: 100vh
+    height: $header-h
     background: url('../images/header-background.png')
     @include coverBg
 
@@ -94,7 +96,7 @@ html
     background: rgba(255, 255, 255, .3)
     width: 90%
     margin: 1rem auto 2rem auto
-    height: 20vh
+    height: 2
     padding: 5px
     display: grid
     grid-template-rows: repeat(2, 1fr)
@@ -148,7 +150,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
     
 .listings__apartments
-    height: 250vh
+    height: $listings-h
     @include flex(column, nowrap, space-around, center)
 
 
@@ -156,8 +158,8 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
     margin: auto
     background: #fff
     border-radius: $border-radius
-    height: 80vh
-    max-height: 90vh
+    height: $apartments-h
+    max-height: $apartments-h-max
     @include flex(column, nowrap, space-between, center)
 
 .apartment__img
@@ -251,7 +253,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
 //SIGNUP    
 .signup
-    height: 50vh
+    height: $signup-h
     background: url('../images/signup.png')
     @include coverBg
 
@@ -259,7 +261,7 @@ $search-elements: ("location": location, "rooms": rooms, "budget": budget, "star
 
 //FOOTER
 .footer
-    height: 20vh
+    height: $footer-h
     color: $flat-color
     padding: .5rem 1rem
 

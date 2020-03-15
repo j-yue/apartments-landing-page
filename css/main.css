@@ -265,6 +265,8 @@
 
 html {
   font-size: 16px;
+  --vh: 1vh;
+  --max-Height: 100vh;
 }
 
 .link {
@@ -277,7 +279,7 @@ html {
 }
 
 .header {
-  height: 100vh;
+  height: var(--max-height);
   background: url("../images/header-background.png");
   background-position: center;
   background-size: cover;
@@ -353,7 +355,7 @@ html {
   background: rgba(255, 255, 255, 0.3);
   width: 90%;
   margin: 1rem auto 2rem auto;
-  height: 20vh;
+  height: 2;
   padding: 5px;
   display: -ms-grid;
   display: grid;
@@ -440,7 +442,7 @@ html {
 }
 
 .listings__apartments {
-  height: 250vh;
+  height: calc(var(--vh)*250);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,8 +461,8 @@ html {
   margin: auto;
   background: #fff;
   border-radius: 3px;
-  height: 80vh;
-  max-height: 90vh;
+  height: calc(var(--vh)*80);
+  max-height: calc(var(--vh)*90);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,14 +607,14 @@ html {
 }
 
 .signup {
-  height: 50vh;
+  height: calc(var(--vh)*50);
   background: url("../images/signup.png");
   background-position: center;
   background-size: cover;
 }
 
 .footer {
-  height: 20vh;
+  height: calc(var(--vh)*20);
   color: #9B9DA0;
   padding: .5rem 1rem;
 }
